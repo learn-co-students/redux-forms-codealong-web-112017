@@ -6,6 +6,7 @@ class App extends Component {
     return (
       <div className="App">
         <CreateTodo store={this.props.store} />
+        {this.props.store.getState().todos.join(" ")}
       </div>
     );
   }
