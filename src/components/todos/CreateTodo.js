@@ -16,13 +16,13 @@ class CreateTodo extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.store.dispatch({type: 'add_todo', todo: this.state.text})
-    debugger
+    // this.props.store.dispatch({type: 'add_todo', todo: e.target.children[0].value})
   }
 
   render() {
     return(
       <div>
-        <form  onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <input type='text' placeholder='enter new to do here' onChange={this.handleInput} value={this.state.text}></input>
           <input type='submit'></input>
         </form>
